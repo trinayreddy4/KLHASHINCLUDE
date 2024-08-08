@@ -1,0 +1,32 @@
+.aboutContainer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 50px 20px;
+    background-color: #121212;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.aboutImage img {
+    width: 400px;
+    border: 1px solid #00aaff;
+    box-shadow: 0 0 20px rgba(0, 170, 255, 0.7);
+}
+
+.aboutText {
+    max-width: 600px;
+    padding: 20px;
+}
+
+.aboutText h1 {
+    color: #00aaff;
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.aboutText p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}

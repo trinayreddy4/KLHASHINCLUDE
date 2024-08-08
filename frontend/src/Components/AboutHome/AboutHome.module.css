@@ -1,0 +1,50 @@
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 20px;
+    background-color: #1a1a1a;
+    color: #ffffff;
+}
+
+.videoSection {
+    flex: 1;
+    margin-right: 20px;
+}
+
+video {
+    width: 80%;
+    height: auto;
+    /* border: 2px solid #ffffff; */
+    border-radius: 5px;
+}
+
+
+.aboutSection {
+    flex: 1;
+}
+
+.aboutSection h3 {
+    font-size: 24px;
+    color: #00aaff;
+}
+
+.aboutSection p {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 10px;
+}
+
+.readMoreButton {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: #00aaff;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.readMoreButton:hover {
+    background-color: #0088cc;
+}

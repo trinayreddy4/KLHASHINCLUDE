@@ -9,14 +9,15 @@ const NavBar = () => {
             <img src={logo} alt="Logo" width="90px" height="90px"/>
         </div>
         <ul className={`${styles.navlinks} gap-5 flex `}>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
+            <li><a href="/">Home</a></li>
+            <li><a href="about">About</a></li>
             <li><a href="#">Events</a></li>
             <li><a href="#">Team</a></li>
-            <li><a href="#">Gallery</a></li>
-            <li><a href="#">Technology Clubs</a></li>
-            <li><a href="#">Sponsors</a></li>
-            <li><a href="#">Register</a></li>
+            {/* <li><a href="#">Gallery</a></li> */}
+            {/* <li><a href="clubs">Technology Clubs</a></li> */}
+            <li><a href="register">Register</a></li>
+            <li><a href="login">Login</a></li>
+            
         </ul>
     </div>
     </div>

@@ -1,23 +1,33 @@
 import { useState } from 'react';
 import './App.css';
 import NavBar from './Components/Navbar/NavBar';
-import VideoPlayer from './Components/VideoPlayer/VideoPlayer';
-import HomeVideo from './assets/HomeVideo.mp4';
-import CountdownTimer from './Components/CountDownTimer/CountDownTimer';
+import Footer from './Components/Footer/Footer';
+import Home from './Pages/Home/Home';
+import RoutesConfig from './Configurations/RoutesConfig';
+
 function App() {
   const [count, setCount] = useState(0)
 
   return (
-    <div className='w-full h-full'>
-      <header>
+    <div className='w-full h-full flex flex-col items-center justify-center'>
+      <header className='
+          w-full
+      '>
         <NavBar />
       </header>
-      <div>
-        <VideoPlayer srcVideo={HomeVideo} className="w-[100px] h-[100px]" />
+      <main>
+        <RoutesConfig/>
+      </main>
+      <div className='
+      w-full
+      flex
+      justify-center
+      items-center
+      p-5
+      '>
+        <Footer/>
       </div>
-      <div style={{ backgroundColor: '#000', height: '50vh', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-      <CountdownTimer targetDate="2024-12-31T23:59:59" />
-    </div>
+     
     </div>
   )
 }
