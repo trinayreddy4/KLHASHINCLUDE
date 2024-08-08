@@ -1,0 +1,28 @@
+.countdownContainer {
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .countdownTitle {
+    font-size: 24px;
+    font-weight: 300;
+  }
+
+  .countdownTimers {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+  }
+
+  
+  .countdownNumber {
+    font-size: 64px;
+    font-weight: 400;
+    margin: 0;
+  }
+  
+  
+
+  
