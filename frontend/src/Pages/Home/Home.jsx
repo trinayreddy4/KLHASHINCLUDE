@@ -6,6 +6,7 @@ import HomeVideo from '../../assets/HomeVideo.mp4';
 import CountdownTimer from '../../Components/CountDownTimer/CountDownTimer';
 
 const Home = () => {
+    console.log(localStorage.getItem('token'));
   return (
     <div>
         <div>

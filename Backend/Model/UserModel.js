@@ -28,7 +28,15 @@ const userSchema = new mongoose.Schema({
     year:{
         type:String,
         required:true,
-    }
+    },
+    paid:{
+        type:Boolean,
+        default:false,
+    },
+    transactionId:{
+        type:String,
+        default:'',
+    },
 });
 
 module.exports = mongoose.model('Users', userSchema);

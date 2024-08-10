@@ -5,6 +5,10 @@ import About from '../Pages/About/About';
 import TechnologyClubs from '../Pages/TechnologyClubs/TechnologyClubs';
 import Login from '../Pages/Login/Login';
 import Register from '../Pages/Register/Register';
+import Events from '../Pages/Events/Events';
+import CreateEvent from '../Pages/CreateEvent/CreateEvent';
+import EventDisplay from '../Pages/EventDisplay/EventDisplay';
+import Profile from '../Pages/Profile/Profile';
 const RoutesConfig = () => {
   return (
     <Routes>
@@ -13,6 +17,10 @@ const RoutesConfig = () => {
         <Route path='/clubs' element={<TechnologyClubs/>} />
         <Route path='/register' element={<Register/>} />
         <Route path='/login' element={<Login/>} />
+        <Route path='/events' element={<Events/>} />
+        <Route path='/createEvent' element={<CreateEvent/>} />
+        <Route path='/event/:id' element={<EventDisplay/>}/>
+        <Route path='/profile' element={<Profile/>}/>
         <Route path="*" element={<Home/>}/>
     </Routes>
   )

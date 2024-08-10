@@ -14,12 +14,12 @@ const ImageMarquee = () => {
     <div className={styles.marqueeContainer}>
       <div className={styles.marqueeContent}>
         {speakers.map(speaker => (
-          <div key={speaker.id} className={styles.imageWrapper}>
+          <div key={Math.random()*1000} className={styles.imageWrapper}>
             <img src={speaker.imgSrc} alt={speaker.altText} className={styles.image} />
           </div>
         ))}
         {speakers.map(speaker => (
-          <div key={speaker.id + '_duplicate'} className={styles.imageWrapper}>
+          <div key={Math.random()*1000} className={styles.imageWrapper}>
             <img src={speaker.imgSrc} alt={speaker.altText} className={styles.image} />
           </div>
         ))}

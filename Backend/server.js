@@ -1,12 +1,15 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const path = require('path');
+const multer = require('multer');
 const env = require('dotenv');
 env.config();
-
+const cors = require('cors');
 const app = express();
 app.use(express.json());
+app.use(cors());
 
+app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 const port = process.env.PORT || 3001;
 
 mongoose.connect(process.env.DB_CONNECT)
@@ -17,17 +20,15 @@ app.listen(port, () => {
   console.log(`Server running on port ${port}`);
 });
 
-// Importing routes
 const userRoute = require(path.join(__dirname, 'Routes', 'UserRoutes.js'));
+const EventRoute = require(path.join(__dirname,'Routes','EventRoute.js'));
 
-// Using routes
 app.use('/api/user', userRoute);
-
+app.use('/api/events',EventRoute);
 app.post('/', (req, res) => {
   res.send('Hello World');
 });
 
-// Catch-all route for invalid routes
 app.post('/*', (req, res) => {
   res.status(404).send('Invalid Route');
 });
