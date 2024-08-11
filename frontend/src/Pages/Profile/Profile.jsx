@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 
 const Profile = () => {
   const [userInfo, setUserInfo] = useState({});
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-
+  const navigate = useNavigate();
   useEffect(() => {
     const fetchUserInfo = async () => {
       try {
@@ -80,7 +81,7 @@ const Profile = () => {
           <div>
             <label className="block text-sm font-medium">Pay Fest Fee:</label>
             <button
-            
+            onClick={()=>{navigate('/payFees')}}
             className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
             >Pay </button>
           </div>

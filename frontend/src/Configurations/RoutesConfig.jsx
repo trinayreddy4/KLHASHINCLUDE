@@ -9,6 +9,7 @@ import Events from '../Pages/Events/Events';
 import CreateEvent from '../Pages/CreateEvent/CreateEvent';
 import EventDisplay from '../Pages/EventDisplay/EventDisplay';
 import Profile from '../Pages/Profile/Profile';
+import Payment from '../Pages/Payment/Payment';
 const RoutesConfig = () => {
   return (
     <Routes>
@@ -21,6 +22,7 @@ const RoutesConfig = () => {
         <Route path='/createEvent' element={<CreateEvent/>} />
         <Route path='/event/:id' element={<EventDisplay/>}/>
         <Route path='/profile' element={<Profile/>}/>
+        <Route path='/payFees' element={<Payment/>}/>
         <Route path="*" element={<Home/>}/>
     </Routes>
   )

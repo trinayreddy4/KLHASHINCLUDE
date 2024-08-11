@@ -22,9 +22,10 @@ app.listen(port, () => {
 
 const userRoute = require(path.join(__dirname, 'Routes', 'UserRoutes.js'));
 const EventRoute = require(path.join(__dirname,'Routes','EventRoute.js'));
-
+const pgRoutes = require(path.join(__dirname,'Routes','PgRoutes.js'));
 app.use('/api/user', userRoute);
 app.use('/api/events',EventRoute);
+app.use('/api/pg',pgRoutes);
 app.post('/', (req, res) => {
   res.send('Hello World');
 });
